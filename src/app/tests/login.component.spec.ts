@@ -24,4 +24,6 @@ describe('LoginComponent', () => {
     const pass = '123';
     expect(component.onLogin(user, pass)).toBeTruthy();
   });
+
+  
 });

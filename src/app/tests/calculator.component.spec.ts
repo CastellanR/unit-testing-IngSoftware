@@ -24,4 +24,11 @@ describe('CalculatorComponent', () => {
     const number2 = 0;
     expect(component.divide).toBeUndefined;
   });
+
+  it('un alumno nivel "aprendiz" no puede acceder a la calculadora', ()=>{
+    let usuario = {
+      level: 'aprendiz'
+    }
+    expect(component.acces(usuario)).toBeFalsy();
+  });
 });
