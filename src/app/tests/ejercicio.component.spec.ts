@@ -22,7 +22,10 @@ describe('EjercicioComponent', () => {
     let usuario =  {
       rol : 'profesor'
     }
-    let ejercicio = "350 + 540";
+      let ejercicio = {
+        ejercicio: '350 + 450',
+        puntaje: 20
+      }
     expect(component.nuevoEjercicio(usuario,ejercicio)).toBeTruthy();
   });
 
@@ -30,7 +33,10 @@ describe('EjercicioComponent', () => {
     let usuario =  {
       rol : 'alumno'
     }
-    let ejercicio = "350 + 540";
+      let ejercicio = {
+        ejercicio: '350 + 450',
+        puntaje: 20
+      }
     expect(component.nuevoEjercicio(usuario,ejercicio)).toBeFalsy();
   });
 
@@ -45,4 +51,28 @@ describe('EjercicioComponent', () => {
     }
     expect(component.comprobarNivel(usuario)).toEqual(newUsuario);
   })
+  it('should only allow excercises with marks (con puntaje)',() => {
+     let usuario =  {
+      rol : 'profesor'
+    }
+      let ejercicio = {
+        ejercicio: '350 + 450',
+        puntaje: 20
+      }
+    expect(component.nuevoEjercicio(usuario,ejercicio)).toBeTruthy();
+  });
+
+  it('should only allow excercises with marks (sin puntaje)',() => {
+     let usuario =  {
+      rol : 'profesor'
+    }
+      let ejercicio = {
+        ejercicio: '350 + 450',
+        puntaje: 0
+      }
+    expect(component.nuevoEjercicio(usuario,ejercicio)).toBeFalsy();
+  });
+
+
+  
 });

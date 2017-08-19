@@ -7,18 +7,21 @@ import {Component} from '@angular/core';
 
 export class EjercicioComponent {
 
-	ejercicio: String;
+	ejercicio = {
+		ejercicio: '',
+		puntaje: '',
+	}
 	puntosPorNivel: number;
 
-	constructor() {
-		// El valor debería ser obtenido de una base de datos
-		this.puntosPorNivel = 10;
-	}
-
-	nuevoEjercicio(usuario: any, ejercicio: String ){
+	nuevoEjercicio(usuario: any, ejercicio: any ){
 		if(usuario.rol=='profesor'){
-			this.ejercicio = ejercicio;
-			return true;
+			if(ejercicio.puntaje!=0){
+			this.ejercicio.ejercicio = ejercicio.ejercicio;
+			this.ejercicio.puntaje = ejercicio.puntaje;
+			return true
+			}else{
+				return false;
+			}
 		}else{
 			return false; 
 		}
