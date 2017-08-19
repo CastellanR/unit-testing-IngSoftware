@@ -12,6 +12,15 @@ export class CalculatorComponent implements OnInit {
   ngOnInit() {
   }
   
+  acces(usr){
+    if(usr.level == 'aprendiz'){
+      return false;
+    }else{
+      if(usr.rol == 'tutor' || usr.level == 'avanzado'){
+        return true;
+      }
+    }
+  }
   divide(num1, num2){
     if( num2 == 0 ){
       return undefined;
