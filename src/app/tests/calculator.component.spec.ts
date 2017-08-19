@@ -24,4 +24,10 @@ describe('CalculatorComponent', () => {
     const number2 = 0;
     expect(component.divide).toBeUndefined;
   });
+
+  it('Se debe obtener el resultado correcto al utilizar la función "sumar"', () => {
+    const number1 = 5;
+    const number2 = 3;
+    expect(component.plus(number1, number2)).toEqual(8);
+  })
 });
