@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EjercicioComponent } from '../main/ejercicio.component';
 
 describe('EjercicioComponent', () => {
@@ -34,4 +33,16 @@ describe('EjercicioComponent', () => {
     let ejercicio = "350 + 540";
     expect(component.nuevoEjercicio(usuario,ejercicio)).toBeFalsy();
   });
+
+  it('Se debe aumentar al nivel siguiente del jugador cuando éste consiga la cantidad necesaria de puntos de acuerdo al nivel actual', () => {
+    let usuario = {
+      nivel: 3,
+      puntaje: 30
+    }
+    let newUsuario = {
+      nivel: 3,
+      puntaje: 30
+    }
+    expect(component.comprobarNivel(usuario)).toEqual(newUsuario);
+  })
 });
