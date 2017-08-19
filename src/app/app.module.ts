@@ -6,12 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './main/calculator.component';
 import { LoginComponent } from './main/login.component';
-
+import { EjercicioComponent } from './main/ejercicio.component';
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
-    LoginComponent
+    LoginComponent,
+    EjercicioComponent
   ],
   imports: [
     BrowserModule,
