@@ -31,7 +31,7 @@ describe('CalculatorComponent', () => {
     expect(component.plus(number1, number2)).toEqual(8);
   })
   
-  it('un alumno nivel "aprendiz" no puede acceder a la calculadora', ()=>{
+  it('un jugador nivel "aprendiz" no puede acceder a la calculadora', ()=>{
     let usuario = {
       level: 'aprendiz'
     }
@@ -44,4 +44,11 @@ describe('CalculatorComponent', () => {
     }
     expect(component.acces(usuario)).toBeTruthy();
   });
+
+  it('un jugador nivel "avanzado" puede acceder a la calculadora', () =>{
+    let usuario = {
+      level: 'avanzado'
+    }
+    expect(component.acces(usuario)).toBeTruthy();
+  })
 });
