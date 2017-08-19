@@ -31,4 +31,11 @@ describe('CalculatorComponent', () => {
     }
     expect(component.acces(usuario)).toBeFalsy();
   });
+
+  it('un usuario con rol "tutor" puede acceder a la calculadora', ()=>{
+    let usuario = {
+      rol : 'tutor'
+    }
+    expect(component.acces(usuario)).toBeTruthy();
+  });
 });
