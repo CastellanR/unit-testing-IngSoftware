@@ -11,7 +11,7 @@ export class EjercicioComponent {
 		ejercicio: '',
 		puntaje: '',
 	}
-	puntosPorNivel: number;
+	puntosPorNivel: number = 10;
 
 	nuevoEjercicio(usuario: any, ejercicio: any ){
 		if(usuario.rol=='profesor'){
@@ -28,7 +28,7 @@ export class EjercicioComponent {
 	}
 
 	comprobarNivel(usuario: any) {
-		usuario.nivel = Math.floor(usuario.puntaje/this.puntosPorNivel);
+		usuario.nivel = Math.round(usuario.puntaje/this.puntosPorNivel)+1;
 		return usuario;
 	}
 }

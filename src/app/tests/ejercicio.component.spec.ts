@@ -46,7 +46,7 @@ describe('EjercicioComponent', () => {
       puntaje: 30
     }
     let newUsuario = {
-      nivel: 3,
+      nivel: 4,
       puntaje: 30
     }
     expect(component.comprobarNivel(usuario)).toEqual(newUsuario);
