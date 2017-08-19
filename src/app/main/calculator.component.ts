@@ -28,4 +28,7 @@ export class CalculatorComponent implements OnInit {
    return num1 / num2;
   }
 
+  plus(num1, num2){
+    return num1 + num2;
+  }
 }

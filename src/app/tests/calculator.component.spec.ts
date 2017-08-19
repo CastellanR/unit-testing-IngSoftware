@@ -25,6 +25,12 @@ describe('CalculatorComponent', () => {
     expect(component.divide).toBeUndefined;
   });
 
+  it('Se debe obtener el resultado correcto al utilizar la función "sumar"', () => {
+    const number1 = 5;
+    const number2 = 3;
+    expect(component.plus(number1, number2)).toEqual(8);
+  })
+  
   it('un alumno nivel "aprendiz" no puede acceder a la calculadora', ()=>{
     let usuario = {
       level: 'aprendiz'
