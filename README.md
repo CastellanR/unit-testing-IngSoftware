@@ -3,9 +3,9 @@
 Este proyecto fue generado mediante Angular CLI version 1.0.0 con el objetivo de resolver el TP 5 "Pruebas unitarias" de la materia Ing. de SW (comisión 4k10)
 
 ## Integrantes
-Castellán, Ricardo
-González, Martin
-Sozzi, Bianca
+Castellán, Ricardo <br />
+González, Martin <br />
+Sozzi, Bianca <br />
 Muñoz Patiño, Mercedes
 
 ## Requisitos para la ejecución del repositorio
