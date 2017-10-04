@@ -22,7 +22,7 @@ describe('CalculatorComponent', () => {
   it('should be undefined on a division by 0', () => {
     const number1 = 12;
     const number2 = 0;
-    expect(component.divide).toBeUndefined;
+    expect(component.divide(number1, number2)).toBeUndefined();
   });
 
   it('Se debe obtener el resultado correcto al utilizar la función "sumar"', () => {
